@@ -1,3 +1,4 @@
+// Accepts marks as an arguement and returns grades
 function studentGrade(marks) {
     if (marks>=79) {
         return "A";
@@ -15,6 +16,7 @@ function studentGrade(marks) {
         return "E";
     }
 }
+
 function handleClick(event) {
     let marks= document.getElementById("marks").value
     document.getElementById("answer").textContent=studentGrade(marks)

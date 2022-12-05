@@ -1,3 +1,4 @@
+//function that adds the gross salary, allowances and commissions
 function grossIncome(...inputs) {
     let sum=0
     for (let k of inputs) {
@@ -5,6 +6,7 @@ function grossIncome(...inputs) {
     } 
     return sum
 }
+//deducts the NHIF and NSSF
 function taxableIncome(gross,...deductions) {
     let g=gross
     for (let k of deductions) {
@@ -67,6 +69,7 @@ function deductions(gross) {
     
     return [NHIF, NSSF]
 }
+//calculates the paye using the required percentages 
 function payAsYouEarn(taxable){
     if (taxable <= 24000){
         return taxable*0.1
@@ -87,4 +90,4 @@ function handleClick(event) {
     let PAYE = payAsYouEarn(taxable)
     document.getElementById("PAYE").textContent=(PAYE)
 }
-console.log(payAsYouEarn(24000))
+console.log(payAsYouEarn())

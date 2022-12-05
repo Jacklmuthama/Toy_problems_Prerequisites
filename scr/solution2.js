@@ -1,3 +1,4 @@
+//This is a function that accepts the speed as an arguement and returns the required statement.
 function carSpeed(input) {
     if (input<=70) {
         return "Ok";
