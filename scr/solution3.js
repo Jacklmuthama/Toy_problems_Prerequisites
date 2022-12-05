@@ -13,7 +13,7 @@ function taxableIncome(gross,...deductions) {
     return g
 }
 function deductions(gross) {
-    let NHIF=0 , NSSF=200;
+    let NHIF=0 , NSSF=gross*0.06;
         if (gross <= 5999) {
         NHIF =150           
         }
@@ -87,5 +87,4 @@ function handleClick(event) {
     let PAYE = payAsYouEarn(taxable)
     document.getElementById("PAYE").textContent=(PAYE)
 }
-
-
+console.log(payAsYouEarn(24000))
